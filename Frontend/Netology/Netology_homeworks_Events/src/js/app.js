@@ -1,4 +1,4 @@
-import Game from "./startGame";
+import Game from "./startgame";
 
 const game = new Game(4);
 

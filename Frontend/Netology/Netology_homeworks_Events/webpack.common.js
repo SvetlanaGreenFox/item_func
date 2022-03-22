@@ -6,7 +6,7 @@ module.exports = {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '',
   },
   module: {
     rules: [
@@ -32,9 +32,10 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg$/,
+        test: /\.(gif|png|jpg|jpeg|svg)$/,
         type: 'asset/resource',
       },
+
     ],
   },
   plugins: [
