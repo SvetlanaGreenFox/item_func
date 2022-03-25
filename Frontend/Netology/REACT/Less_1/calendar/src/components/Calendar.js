@@ -1,4 +1,6 @@
 import React from 'react';
+import CalendarTableHead from './CalendarTableHead.js';
+import CalendarTableBody from './CalendarTableBody.js';
 
 function Calendar(props) {
   const { date } = props;
@@ -45,6 +47,19 @@ function Calendar(props) {
           <span className="ui-datepicker-year">{date.year}</span>
         </div>
       </div>
+      <table className="ui-datepicker-calendar">
+        <colgroup>
+          <col />
+          <col />
+          <col />
+          <col />
+          <col />
+          <col className="ui-datepicker-week-end" />
+          <col className="ui-datepicker-week-end" />
+        </colgroup>
+        <CalendarTableHead />
+        <CalendarTableBody dataDate={date} />
+      </table>
     </div>
   );
 }
